@@ -97,72 +97,6 @@ html{
     padding: 2rem 9%;
 }
 
-.login-form-container{
-    position: fixed;
-    top:-105%; left:0;
-    height:100%;
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:rgba(255,255,255,.9);
-    z-index: 10000;
-    opacity: 0;
-}
-
-.login-form-container.active{
-    top: 0;
-    opacity: 1;
-}
-
-
-
-.login-form-container form{
-    margin:2rem;
-    text-align: center;
-    padding:2rem;
-    width:40rem;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    border:var(--border);
-    background: #fff;
-}
-.login-form-container form .buttons{
-    display: flex;
-    gap:1rem;
-    align-items: center;
-}
-.login-form-container form .btn{
-    display: block;
-    width:100%;
-    margin:.5rem 0;
-}
-
-.login-form-container form h3{
-    padding-bottom:1rem;
-    font-size: 2.5rem;
-    color:var(--black);
-    text-transform: uppercase;
-}
-.login-form-container form .box{
-    margin:.7rem 0;
-    width: 100%;
-    font-size: 1.6rem;
-    color:var(--black);
-    text-transform: none;
-    border:var(--border);
-    padding:1rem 1.2rem;
-    border-radius: .5rem;
-}
-.login-form-container #close-login-form{
-    position: absolute;
-    top:1.5rem; right:2.5rem;
-    font-size: 5rem;
-    color:var(--black);
-    cursor: pointer;
-}
-
-
 
 
 
@@ -217,14 +151,20 @@ html{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    .header .navbar.active{
+    .header .active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     .ItemLink{
-display: block;
+display: inline-block;
 margin: 2rem;
 font-size: 2rem;
     }
+    .navbar {
+        display: flex;
+flex-direction: row;
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
 }
 
 

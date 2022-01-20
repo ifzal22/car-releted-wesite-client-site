@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './Banner.css';
 
 const Banner = () => {
-
+/* 
     document.querySelector('.home').onmousemove = (e) =>{
 
         document.querySelectorAll('.home-parallax').forEach(elm =>{
@@ -18,7 +18,7 @@ const Banner = () => {
         });
       
       };
-
+ */
     return (
         <div>
 <section class="home" id="home">
@@ -27,7 +27,7 @@ const Banner = () => {
 
 <img data-speed="5" className="home-parallax" src="https://i.ibb.co/PjgGm4C/home-img.png" alt=""/>
 
-<Link data-speed="7" href="#" className="btn home-parallax">explore cars</Link>
+<Link to="/allService" data-speed="7" href="#" className="btn home-parallax">explore cars</Link>
 
 </section>
         </div>
