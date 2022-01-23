@@ -8,7 +8,7 @@ const AddProducts = () => {
     const onSubmit = data =>{
         data.status = "pending";
         console.log(data);
-        axios.post('http://localhost:5000/addCars',data)
+        axios.post('https://whispering-refuge-31044.herokuapp.com/addCars',data)
         .then(res =>{
             if (res.data.insertedId) {
                 console.log(res.data)

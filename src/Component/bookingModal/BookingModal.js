@@ -27,7 +27,7 @@ const BookingModal = ({ openBooking, handleBookingClose, }) => {
 
 const [allCars,setAllCars]= useState([]);
    useEffect(()=>{
-       fetch('http://localhost:5000/AllCars')
+       fetch('https://whispering-refuge-31044.herokuapp.com/AllCars')
        .then(res=>res.json())
        .then ( data => setAllCars(data))
    },[])
@@ -60,7 +60,7 @@ const handleBookingSubmit = e => {
     }
     // console.log(booking)
     // send to the server
-    fetch('http://localhost:5000/booking', {
+    fetch('https://whispering-refuge-31044.herokuapp.com/booking', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

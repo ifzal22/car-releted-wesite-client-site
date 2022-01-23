@@ -5,7 +5,7 @@ const AllBooking = () => {
     const [allOrders, setAllOrders] = useState([]);
     const [isDeleted, setIsDeleted] = useState(false)
     useEffect(()=>{
-        fetch('http://localhost:5000/AllBooking')
+        fetch('https://whispering-refuge-31044.herokuapp.com/AllBooking')
 
         
         .then(res => res.json())

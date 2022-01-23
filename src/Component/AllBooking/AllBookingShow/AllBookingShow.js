@@ -11,7 +11,7 @@ const AllOrderShow = ({allOrder,index,setIsDeleted}) => {
         
         const proceed = window.confirm('Are You Deleted This Order?');
         if (proceed) {
-            fetch(`http://localhost:5000/deleteMYBooking/${id}`, {
+            fetch(`https://whispering-refuge-31044.herokuapp.com/deleteMYBooking/${id}`, {
             method: 'DELETE',
             headers: {
                 content: 'application/json'
@@ -36,7 +36,7 @@ const AllOrderShow = ({allOrder,index,setIsDeleted}) => {
 
     const handleConfirm = (id)=>{
         
-fetch(`http://localhost:5000/CnfirmOrder/${id}`,{
+fetch(`https://whispering-refuge-31044.herokuapp.com/CnfirmOrder/${id}`,{
     method: 'PUT',
     headers: {
         content: 'application/json'
@@ -67,6 +67,7 @@ fetch(`http://localhost:5000/CnfirmOrder/${id}`,{
 <p>
   {email}
 </p>
+<span> {date}</span>
 </div>
 </div>
 

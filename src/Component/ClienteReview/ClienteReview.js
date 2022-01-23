@@ -9,7 +9,7 @@ const ClienteReview = () => {
 
     const [review,setReview]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('https://whispering-refuge-31044.herokuapp.com/review')
         .then(res=>res.json())
         .then ( data => setReview(data))
     },[])
