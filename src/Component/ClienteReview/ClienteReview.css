@@ -37,7 +37,7 @@
     padding-bottom: .5rem;
 }
 
-.reviews .review-slider .box .content .stars i{
+.reviews .review-slider .box .content .stars {
     color:var(--yellow);
     font-size: 1.7rem;
 }

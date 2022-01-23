@@ -12,6 +12,8 @@ const [allCars,setAllCars]= useState([]);
        .then ( data => setAllCars(data.slice(0, 4)))
    },[])
    console.log(allCars)
+
+   
     return (
         <div>
 

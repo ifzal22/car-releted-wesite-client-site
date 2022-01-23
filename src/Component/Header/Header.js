@@ -18,7 +18,7 @@ const Header = () => {
 
     <div>
         <header className='header'>
-            <div onClick={handleToggle} id="menu-btn" class="fas fa-bars"></div>
+            <div onClick={handleToggle} id="menu-btn" className="fas fa-bars"></div>
 
 
             <NavLink to="/home" className='logo ItemLink'><span>IHT</span>Car'S</NavLink>
@@ -78,7 +78,7 @@ navbarOpen == true ?
                             <Link to="/login">
                                 <div id='login-btn'>
                                     <button onClick={logout} className='btn'>LogOut</button>
-                                    <i class="far fa-user"></i>
+                                    <i className="far fa-user"></i>
 
                                 </div>
                             </Link>
@@ -86,7 +86,7 @@ navbarOpen == true ?
                             <Link to="/login">
                                 <div id='login-btn'>
                                     <button className='btn'>Login</button>
-                                    <i class="far fa-user"></i>
+                                    <i className="far fa-user"></i>
 
                                 </div>
                             </Link>

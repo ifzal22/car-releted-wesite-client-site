@@ -21,9 +21,9 @@ const Banner = () => {
  */
     return (
         <div>
-<section class="home" id="home">
+<section className="home" id="home">
 
-<h3 data-speed="-2" class="home-parallax">find your car</h3>
+<h3 data-speed="-2" className="home-parallax">find your car</h3>
 
 <img data-speed="5" className="home-parallax" src="https://i.ibb.co/PjgGm4C/home-img.png" alt=""/>
 

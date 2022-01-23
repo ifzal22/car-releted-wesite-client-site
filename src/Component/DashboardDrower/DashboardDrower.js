@@ -18,13 +18,15 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Route } from 'react-router-dom';
 import { Link, Switch, useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
+import AddProducts from '../AddProducts/AddProducts';
 import AdminRout from '../AdminRout/AdminRout';
 import MakeAdmin from '../AdminRoute/MakeAdmin/MakeAdmin';
+import AllBooking from '../AllBooking/AllBooking';
 import MyBooking from '../AllBooking/MyBooking';
-import AddHotCars from '../Home/HotCar/AddHotCars/AddHotCars';
 import useAuth from '../Hooks/UseAuth';
 import './DeashBoard.css';
 import DeashBoardHome from './DeashBordHome/DeashBoardHome';
+import Review from './Review/Review';
 
 
 ;
@@ -52,19 +54,27 @@ function DashboardDrawer(props) {
 
 
       <List className='m-3'>
-<h1><Button className='text-light' variant="outlined"> <Link to={`${url}`}>DashBoard </Link></Button> <br/></h1>
+
+<h1><Button className='text-light' variant="outlined"> <Link to={`${url}`}><Typography variant="h5"> DashBoard</Typography> </Link></Button> <br/></h1>
  {/* <Link to="/dashboardDrawer"> </Link> */}
 
 
-
  { admin &&
- <Button  variant="outlined"> <Link to={`${url}/makeAdmin`}> MakeAdmin </Link></Button>
+ <Button className="btn" variant="outlined"> <Link to={`${url}/makeAdmin`}> 
+ <Typography variant="h5">MakeAdmin</Typography> </Link></Button>
   }
  <br/>
-<Button  variant="outlined"> <Link to={`${url}/MyBooking`}> MYBOOKING </Link></Button> <br/>
+<Button  className="btn" variant="h3" variant="outlined"> <Link to={`${url}/MyBooking`}> <Typography variant="h5"  color="secondary">MYBOOKING</Typography> </Link></Button> <br/>
+<Button  className="btn" variant="outlined"> <Link to={`${url}/ClienteReview`}>  <Typography variant="h5">Review</Typography>  </Link></Button> <br/>
+
+
 {
   admin && 
-  <Button  variant="outlined"> <Link to={`${url}/AddHotCar`}> ADD CAR'S </Link></Button>
+  <Button  variant="contained"> <Link to={`${url}/AddHotCar`}> <Typography color="white" variant="h5">ADD CAR'S</Typography> </Link></Button>
+} <br/>
+{
+  admin && 
+  <Button  variant="contained"> <Link to={`${url}/AllBooking`}> <Typography color="white" variant="h5">AllBooking</Typography> </Link></Button>
 } <br/>
 
 
@@ -150,7 +160,7 @@ function DashboardDrawer(props) {
         </Drawer>
       </Box>
       <Box
-
+className='row'
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
@@ -159,7 +169,7 @@ function DashboardDrawer(props) {
    
         <Grid sx={{justifyContent:'center'}} container spacing={2}>
 
-  <Grid item xs={4} sx={10} >
+  <Grid item xs={4} sx={12}  className='col-md-12'>
   <Switch>
           <Route exact path={path}>
             <DeashBoardHome></DeashBoardHome>
@@ -170,8 +180,14 @@ function DashboardDrawer(props) {
           <Route path={`${path}/MyBooking`}>
             <MyBooking></MyBooking>
           </Route>
+          <Route path={`${path}/ClienteReview`}>
+            <Review></Review>
+          </Route>
           <AdminRout path={`${path}/AddHotCar`}>
-            <AddHotCars></AddHotCars>
+            <AddProducts></AddProducts>
+          </AdminRout>
+          <AdminRout path={`${path}/AllBooking`}>
+            <AllBooking></AllBooking>
           </AdminRout>
         </Switch>
   </Grid>

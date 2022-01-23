@@ -1,63 +1,73 @@
-import React from 'react';
+// import { Rating, Stack } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
 import './ClienteReview.css';
 const ClienteReview = () => {
+
+     
+
+
+    const [review,setReview]= useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:5000/review')
+        .then(res=>res.json())
+        .then ( data => setReview(data))
+    },[])
+    console.log(review.Name)
+ 
+
     return (
-        <div>
-            <section class="reviews" id="reviews">
 
-<h1 class="heading"> client's <span>review</span> </h1>
+        <div className=''>
+             <h1 className="heading"> client's <span>review</span> </h1>
+             <section className="reviews" id="reviews">
 
-<div class="swiper review-slider">
+               
+                
+<div className="swiper review-slider">
 
-    <div class="swiper-wrapper row">
+    <div className="swiper-wrapper row">
+        {
+            review.map(p => 
+  
+                        <div className="swiper-slide box col-md-4 p-2 m-2 shadow-lg">
+                            <img src={p.photoURL} alt=""/>
+                            <div className="content">
+                                <p>{p.Review}.</p>
+                                <h3>{p.Name}</h3>
+                                <div className="stars">
+                                <Rating readonly
+       initialRating={p.Rating}
+       fullSymbol="fas fa-star fa-2px"
+       emptySymbol="far fa-star fa-2px">
+           </Rating>
+             
+                              {/*   <Stack spacing={1} className='text-center'>
+      <Rating name="half-rating" defaultValue={p.Rating} />
 
-        <div class="swiper-slide box col-md-4 p-2 m-2 shadow-lg">
-            <img src="https://i.ibb.co/pKgsWwm/pic-3.png" alt=""/>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box col-md-4 p-2 m-2">
-            <img src="https://i.ibb.co/Cz8WQyR/pic-5.png" alt=""/>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-        </div>
-
-    
 
      
+    </Stack> */}
 
-     
-
-    
-
-    </div>
-
-    <div class="swiper-pagination"></div>
-
-</div>
-
-</section>
+                                </div>
+                            </div>
+                        </div>
+                
+                )    
+            }
+                
+                    </div>
+                
+             
+                
+                </div>
+                
+                </section> 
+                
+                )
+        
         </div>
-    );
+    )
 };
 
 export default ClienteReview;
