@@ -1,0 +1,16 @@
+.TABLE{
+    background-color: wheat;
+    color: black;
+    font-size:larger;
+}
+.CELL{
+    background: rgb(243, 243, 243);
+    padding: 5px;
+    margin: 3px;
+}
+.MARGIN{
+    margin-top: 60px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}

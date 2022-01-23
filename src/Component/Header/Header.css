@@ -97,8 +97,20 @@ html{
     padding: 2rem 9%;
 }
 
+li{list-style: none;}
+.nav2{
+    position: absolute;
+    margin-top: 350px;
+    margin-right: 20px;
+    background-color: wheat;
+    border-radius: 20px;
+    transition: 0.5s;
 
-
+}
+.nav2:hover{
+    color: var(--yellow);
+    box-shadow: var(--box-shadow);
+}
 
 
 
@@ -125,11 +137,17 @@ html{
     section{
         padding:2rem ;
     }
-    
+    /* .nav2{
+      display: none;
+    }
+     */
 }
 
 @media(max-width:768px){
     #menu-btn{
+        display: block;
+    }
+    .nav2{
         display: block;
     }
     #menu-btn.fa-times{
@@ -154,11 +172,14 @@ html{
     .header .active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
+
     .ItemLink{
 display: inline-block;
 margin: 2rem;
 font-size: 2rem;
     }
+
+ 
     .navbar {
         display: flex;
 flex-direction: row;
@@ -173,5 +194,8 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         font-size: 50%;
       
     }
+    /* .nav2{
+        display: block;
+    } */
     
 }

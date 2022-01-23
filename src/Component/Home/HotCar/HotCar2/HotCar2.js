@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import './HotCar.css';
-const HotCar = () => {
+import './HotCar2.css';
+const HotCar2 = () => {
     // const { name, time, space } = booking;
   
 
@@ -9,7 +9,7 @@ const [allCars,setAllCars]= useState([]);
    useEffect(()=>{
        fetch('http://localhost:5000/AllCars')
        .then(res=>res.json())
-       .then ( data => setAllCars(data.slice(0, 4)))
+       .then ( data => setAllCars(data))
    },[])
    console.log(allCars)
     return (
@@ -64,4 +64,4 @@ allCars.map(allcar =>
     );
 };
 
-export default HotCar;
+export default HotCar2;

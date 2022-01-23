@@ -68,3 +68,8 @@ margin-top: 100px;
 p{
     font-size: 1.5rem;
 }
+.CENTER{
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+}
