@@ -35,7 +35,10 @@ return (
 <div>
 
 <div className='login-form-container'>
-<span id="close-login-form" className="fas fa-times"></span>
+    <Link to="/home">
+    <span id="close-login-form" className="fas fa-times"></span>
+    </Link>
+
 
 
 {!isLoading && 

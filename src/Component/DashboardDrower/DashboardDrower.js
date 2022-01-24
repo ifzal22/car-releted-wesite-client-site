@@ -5,7 +5,6 @@ import { Button, Grid } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -39,21 +38,21 @@ function DashboardDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const {admin} = useAuth();
+  const {admin,logout} = useAuth();
   let { path, url } = useRouteMatch();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
-    <div className='DRAWER'>
-      <Toolbar className='DRAWER' />
-      <Divider />
+    <div className=''>
+      <Toolbar className='' />
 
 
 
 
-      <List className='m-3'>
+
+      <List className='m-3 DRAWER'>
 
 <h1><Button className='text-light' variant="outlined"> <Link to={`${url}`}><Typography variant="h5"> DashBoard</Typography> </Link></Button> <br/></h1>
  {/* <Link to="/dashboardDrawer"> </Link> */}
@@ -88,7 +87,7 @@ function DashboardDrawer(props) {
           </ListItem>
         ))}
       </List>
-      <Divider />
+   
 
     </div>
   );
@@ -97,13 +96,13 @@ function DashboardDrawer(props) {
 
   return (
     <div>
-      <Box sx={{ display: 'flex', marginTop: '100px' }}>
+      <Box sx={{ display: 'flex',  }}>
         <CssBaseline />
         <AppBar
           className="NAV"
           position="fixed"
           sx={{
-            marginTop: '100px',
+        
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
           }}
@@ -118,8 +117,13 @@ function DashboardDrawer(props) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              Responsive drawer
+            <Typography className='my-3' variant="h6" noWrap component="div">
+              <Link to="/home">
+                <button className='btn'>Home</button>
+              </Link>
+              <Link to="/login">
+              <button onClick={logout} className='btn'>LogOut</button>
+              </Link>
             </Typography>
           </Toolbar>
         </AppBar>

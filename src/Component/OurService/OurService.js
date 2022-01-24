@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import Header from '../Header/Header';
 import './OurService.css';
 
 const OurService = () => {
@@ -18,6 +19,8 @@ const OurService = () => {
 
 console.log(services)
     return (
+        <>
+        <Header></Header>
         <div className='mar'>
             
 <section className="services" id="services">
@@ -52,6 +55,7 @@ console.log(services)
 
 </section>
         </div>
+        </>
     );
 };
 

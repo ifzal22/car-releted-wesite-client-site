@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import Header from '../../../Header/Header';
 import './HotCar2.css';
 const HotCar2 = () => {
     // const { name, time, space } = booking;
@@ -15,7 +16,7 @@ const [allCars,setAllCars]= useState([]);
     return (
         <div>
 
-
+<Header></Header>
 
          <section className="vehicles " id="vehicles">
 

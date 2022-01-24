@@ -40,7 +40,10 @@ const Login = () => {
 
 
             <div className='login-form-container'>
-                <span id="close-login-form" className="fas fa-times"></span>
+                <Link to="/home">
+                <span  id="close-login-form" className="fas fa-times"></span>
+                </Link>
+            
                 <form onSubmit={handleLoginSubmit}>
 
                     <h3>user login</h3>
