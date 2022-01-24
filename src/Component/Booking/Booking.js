@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import Header from '../Header/Header';
 import '../Home/HotCar/HotCar2/HotCar2.css';
 import BookingModal from './../bookingModal/BookingModal';
 const Booking = ({ booking }) => {
@@ -15,7 +16,10 @@ const Booking = ({ booking }) => {
             .then(data => setSingleData(data))
     }, [])
     console.log(singleData)
-    return (
+    return ( 
+
+        <>
+         <Header></Header>  
         <div className='BOOK mt-8 pt-5 mx-auto'>
            
 {/* 
@@ -84,6 +88,7 @@ const Booking = ({ booking }) => {
                     handleBookingClose={handleBookingClose}></BookingModal>
           
         </div>
+        </>
     );
 };
 

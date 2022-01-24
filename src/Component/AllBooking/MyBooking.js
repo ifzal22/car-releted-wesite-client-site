@@ -66,7 +66,7 @@ const style = {
   };
 
     return (
-        <div className='MARGIN'>
+        <div className='MARGIN col-md-12'>
             <h1 className='text-danger' >Booking: {booking.length}</h1>
             <TableContainer 
             sx={{style}}

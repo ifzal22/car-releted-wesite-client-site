@@ -63,13 +63,13 @@ function DashboardDrawer(props) {
  <Typography variant="h5">MakeAdmin</Typography> </Link></Button>
   }
  <br/>
-<Button  className="btn" variant="h3" variant="outlined"> <Link to={`${url}/MyBooking`}> <Typography variant="h5"  color="secondary">MYBOOKING</Typography> </Link></Button> <br/>
+<Button className='btn'  className="btn" variant="h3" variant="outlined"> <Link to={`${url}/MyBooking`}> <Typography  variant="h5"  color="secondary">MYBOOKING</Typography> </Link></Button> <br/>
 <Button  className="btn" variant="outlined"> <Link to={`${url}/ClienteReview`}>  <Typography variant="h5">Review</Typography>  </Link></Button> <br/>
 
 
 {
   admin && 
-  <Button  variant="contained"> <Link to={`${url}/AddHotCar`}> <Typography color="white" variant="h5">ADD CAR'S</Typography> </Link></Button>
+  <Button  variant="contained"> <Link to={`${url}/AddHotCar`}> <Typography className='btn' color="white" variant="h5">ADD CAR'S</Typography> </Link></Button>
 } <br/>
 {
   admin && 
@@ -118,7 +118,7 @@ function DashboardDrawer(props) {
               <MenuIcon />
             </IconButton>
             <Typography className='my-3' variant="h6" noWrap component="div">
-              <Link to="/home">
+              <Link className="mx-3" to="/home">
                 <button className='btn'>Home</button>
               </Link>
               <Link to="/login">
@@ -163,18 +163,14 @@ function DashboardDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box
-className='row'
-        component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-      >
-        {/* <Toolbar /> */}
+      <Box>
+       
 
    
-        <Grid sx={{justifyContent:'center'}} container spacing={2}>
+        <Grid className='' sx={{justifyContent:'center'}} container >
 
-  <Grid item xs={4} sx={12}  className='col-md-12'>
-  <Switch>
+  <Grid item xs={8} sx={12}  className='row'>
+  <Switch className=''>
           <Route exact path={path}>
             <DeashBoardHome></DeashBoardHome>
           </Route>

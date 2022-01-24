@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 import './About.css';
-
 const About = () => {
     return (
+      <>
+       <Header></Header> 
         <div className='container row mx-auto' >
 
             <div className='card col-md-6 '>
@@ -61,6 +63,7 @@ src="https://avatars.githubusercontent.com/u/86657054?v=4" alt="" />
             </div>
            
         </div>
+        </>
     );
 };
 

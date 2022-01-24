@@ -33,7 +33,7 @@ const MakeAdmin = () => {
         e.preventDefault()
     }
     return (
-        <div className='CENTER ' style={{ marginTop: '100px' }}>
+        <div className='CENTER col-md-12' style={{ marginTop: '8px' }}>
 
 
 
