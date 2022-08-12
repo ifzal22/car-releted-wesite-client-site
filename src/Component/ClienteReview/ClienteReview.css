@@ -41,3 +41,6 @@
     color:var(--yellow);
     font-size: 1.7rem;
 }
+.swiper-wrapper{
+    margin: auto;
+}

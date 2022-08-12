@@ -1,13 +1,20 @@
 import axios from 'axios';
-import React from 'react';
+import { default as React } from 'react';
 import { useForm } from 'react-hook-form';
 import '../Login/Login.css';
 import './AddProducts.css';
 const AddProducts = () => {
+    
     const { register, handleSubmit,reset }=useForm();
+  
     const onSubmit = data =>{
+       
+
+
         data.status = "pending";
         console.log(data);
+
+        
         axios.post('https://whispering-refuge-31044.herokuapp.com/addCars',data)
         .then(res =>{
             if (res.data.insertedId) {
@@ -34,6 +41,14 @@ const AddProducts = () => {
                 <textarea className="box" {...register("description")} placeholder="Description" />
                 <input  className="box" type="number" {...register("price")} placeholder="price" />
                 <input  className="box" {...register("img")} placeholder="image url" />
+
+<input 
+
+{...register("image")}
+ className="box"
+accept='image/*'
+type="file" />
+
                 <input className="btn" type="submit" />
             </form>
         </div>

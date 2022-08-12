@@ -18,19 +18,21 @@ const ClienteReview = () => {
 
     return (
 
-        <div className=''>
+        <div className='mx-auto'>
              <h1 className="heading"> client's <span>review</span> </h1>
+
+             
              <section className="reviews" id="reviews">
 
                
                 
 <div className="swiper review-slider">
 
-    <div className="swiper-wrapper row">
+    <div className="swiper-wrapper row mx-auto container ">
         {
             review.map(p => 
   
-                        <div className="swiper-slide box col-md-4 p-2 m-2 shadow-lg">
+                        <div className=" box col-md-4 p-2 m-2 shadow-lg ">
                             <img src={p.photoURL} alt=""/>
                             <div className="content">
                                 <p>{p.Review}.</p>

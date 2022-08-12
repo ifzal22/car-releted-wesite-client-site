@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Header from '../../../Header/Header';
 import './HotCar2.css';
 const HotCar2 = () => {
+    
     // const { name, time, space } = booking;
   
 

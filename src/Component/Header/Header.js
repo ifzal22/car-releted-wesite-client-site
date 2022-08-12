@@ -26,7 +26,7 @@ const Header = () => {
 
           
 {
-navbarOpen == true ?
+navbarOpen === true ?
 
 <nav className='nav2 shadow'>
 
