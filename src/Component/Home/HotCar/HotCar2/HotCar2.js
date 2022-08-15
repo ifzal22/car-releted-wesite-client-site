@@ -9,7 +9,7 @@ const HotCar2 = () => {
 
 const [allCars,setAllCars]= useState([]);
    useEffect(()=>{
-       fetch('https://whispering-refuge-31044.herokuapp.com/AllCars')
+       fetch('https://car-releted-web.herokuapp.com/AllCars')
        .then(res=>res.json())
        .then ( data => setAllCars(data))
    },[])
@@ -26,6 +26,15 @@ const [allCars,setAllCars]= useState([]);
 <div className="swiper vehicles-slider ">
 
     <div className="swiper-wrapper row">
+
+
+
+
+{
+    allCars.length === 0 ? <div style={{marginTop:'100px',fontSize:'40px',margin:'300px',marginLeft:'300px'}} className="spinner-border text-center" role="status">
+  <span class="sr-only">Loading...<span>Loding.....</span> </span>
+</div>:''
+}
 
       {
 allCars.map(allcar => 

@@ -18,7 +18,7 @@ const MyBooking = () => {
     // console.log(email)
     useEffect(() => {
 
-     const url =`https://whispering-refuge-31044.herokuapp.com/myBooking/${email}`
+     const url =`https://car-releted-web.herokuapp.com/myBooking/${email}`
      
      fetch(url, {
       headers:{
@@ -36,7 +36,7 @@ const MyBooking = () => {
 const handleDeleteOrder = (id) => {
     const proceed = window.confirm('Are You Deleted This Order?');
     if (proceed) {
-        fetch(`https://whispering-refuge-31044.herokuapp.com/deleteMYBooking/${id}`, {
+        fetch(`https://car-releted-web.herokuapp.com/deleteMYBooking/${id}`, {
         method: 'DELETE',
         headers: {
             content: 'application/json'

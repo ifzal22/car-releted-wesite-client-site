@@ -9,7 +9,7 @@ const ClienteReview = () => {
 
     const [review,setReview]= useState([]);
     useEffect(()=>{
-        fetch('https://whispering-refuge-31044.herokuapp.com/review')
+        fetch('https://car-releted-web.herokuapp.com/review')
         .then(res=>res.json())
         .then ( data => setReview(data))
     },[])
@@ -29,6 +29,9 @@ const ClienteReview = () => {
 <div className="swiper review-slider">
 
     <div className="swiper-wrapper row mx-auto container ">
+    {review.length === 0? <div className='d-flex text-center'><div className="spinner-border" role="status">
+  <span className="sr-only">Loading...</span>
+</div> <h1 className='text-prymari'>Lodding....</h1> </div>:''}
         {
             review.map(p => 
   

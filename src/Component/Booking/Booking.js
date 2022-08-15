@@ -11,7 +11,7 @@ const Booking = ({ booking }) => {
     const { id } = useParams();
     const [singleData, setSingleData] = useState({});
     useEffect(() => {
-        fetch(`https://whispering-refuge-31044.herokuapp.com/AllCars/${id}`)
+        fetch(`https://car-releted-web.herokuapp.com/AllCars/${id}`)
             .then(res => res.json())
             .then(data => setSingleData(data))
     }, [])

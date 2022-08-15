@@ -15,7 +15,7 @@ const AddProducts = () => {
         console.log(data);
 
         
-        axios.post('https://whispering-refuge-31044.herokuapp.com/addCars',data)
+        axios.post('https://car-releted-web.herokuapp.com/addCars',data)
         .then(res =>{
             if (res.data.insertedId) {
                 console.log(res.data)

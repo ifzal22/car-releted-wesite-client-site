@@ -50,7 +50,7 @@ const Review = () => {
          
         }
 
-        fetch('https://whispering-refuge-31044.herokuapp.com/review', {
+        fetch('https://car-releted-web.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

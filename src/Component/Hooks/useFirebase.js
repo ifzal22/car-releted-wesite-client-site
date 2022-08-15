@@ -105,7 +105,7 @@ const [token, setToken] = useState('');
     }, [])
 
 useEffect(()=>{
-    fetch(`https://whispering-refuge-31044.herokuapp.com/users/${user.email}`)
+    fetch(`https://car-releted-web.herokuapp.com/users/${user.email}`)
     .then(res => res.json())
     .then(data => setAdmin(data.admin))
 
@@ -123,7 +123,7 @@ useEffect(()=>{
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://whispering-refuge-31044.herokuapp.com/users', {
+        fetch('https://car-releted-web.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

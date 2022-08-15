@@ -10,7 +10,7 @@ const OurService = () => {
     const [services, setServices] = useState([]);
    
     useEffect(()=>{
-        fetch('https://whispering-refuge-31044.herokuapp.com/services')
+        fetch('https://car-releted-web.herokuapp.com/services')
 
         
         .then(res => res.json())
@@ -28,7 +28,9 @@ console.log(services)
 <h1 className="heading"> our <span>services</span> </h1>
 
 <div className="box-container">
-
+{services.length === 0? <div className='d-flex text-center'><div className="spinner-border" role="status">
+  <span className="sr-only">Loading...</span>
+</div> <h1 className='text-prymari'>Lodding....</h1> </div>:''}
  {
      services.map(service => 
         

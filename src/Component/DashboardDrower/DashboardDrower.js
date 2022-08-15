@@ -39,6 +39,7 @@ function DashboardDrawer(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const {admin,logout} = useAuth();
+  console.log(admin);
   let { path, url } = useRouteMatch();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -63,7 +64,7 @@ function DashboardDrawer(props) {
  <Typography variant="h5">MakeAdmin</Typography> </Link></Button>
   }
  <br/>
-<Button className='btn'  className="btn" variant="h3" variant="outlined"> <Link to={`${url}/MyBooking`}> <Typography  variant="h5"  color="secondary">MYBOOKING</Typography> </Link></Button> <br/>
+<Button   className="btn"  variant="outlined"> <Link to={`${url}/MyBooking`}> <Typography  variant="h5"  color="secondary">MYBOOKING</Typography> </Link></Button> <br/>
 <Button  className="btn" variant="outlined"> <Link to={`${url}/ClienteReview`}>  <Typography variant="h5">Review</Typography>  </Link></Button> <br/>
 
 
